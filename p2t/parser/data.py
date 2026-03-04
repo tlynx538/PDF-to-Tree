@@ -5,12 +5,12 @@ from fastNLP import DataSet, Instance
 from fastNLP.io import Loader
 from utils import load_jsonl
 import logging
-from parser.state import get_train_data
+from .state import get_train_data
 from fastNLP.transformers.torch import BertTokenizer, RobertaTokenizer
 from fastNLP import Vocabulary
 from transformers import LayoutLMTokenizer, LayoutLMv2Tokenizer, LayoutLMv3Tokenizer, LayoutLMv3FeatureExtractor
-from parser.tree import NODE_LABELS
-from parser.state import DEFAULT_STACK_WINDOW_SIZE, DEFAULT_BUF_WINDOW_SIZE
+from .tree import NODE_LABELS
+from .state import DEFAULT_STACK_WINDOW_SIZE, DEFAULT_BUF_WINDOW_SIZE
 from PIL import Image, ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 

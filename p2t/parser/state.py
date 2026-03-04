@@ -1,6 +1,6 @@
 import logging
 
-from parser.tree import TreeNode
+from .tree import TreeNode
 
 
 DEFAULT_STACK_WINDOW_SIZE = 3

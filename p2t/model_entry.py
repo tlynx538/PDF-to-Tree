@@ -17,11 +17,11 @@ from fastNLP import prepare_torch_dataloader, BucketedBatchSampler
 from fastNLP import DataSet
 from fastNLP import logger as logging
 from fastNLP.io import DataBundle
-from parser.data import DocLayoutFeatureExtractor
+from p2t.parser.data import DocLayoutFeatureExtractor
 from model import DocLayoutParserModel
 from metric import eval_parser_pred, eval_cls_pred, eval_speed
 from utils import load_json, save_json, load_jsonl, load_pickle
-from parser.state import ParserState
+from p2t.parser.state import ParserState
 from callback import SaveEvalResultCallback
 from torchsampler import ImbalancedDatasetSampler
 from torch.optim.lr_scheduler import LinearLR
@@ -32,7 +32,7 @@ class ModelEntry(object):
         self.model = None
         self.app_root = os.path.realpath(os.path.dirname(__file__))
         try:
-            with open(self._root_path("model.yml")) as inp_file:
+            with open(self._root_path("model.yml"),encoding="utf-8") as inp_file:
                 self.model_yaml = yaml.safe_load(inp_file)
         except yaml.YAMLError as e:
             logging.error(f"Failed to load {self._root_path('model.yml')}: {e}")

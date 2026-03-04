@@ -2,3 +2,8 @@
 *.pyc
 .ipynb_checkpoints
 __pycache__
+out/
+p2t/__pycache__
+p2t.train_data.tar.gz 
+models/
+train_data/

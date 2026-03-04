@@ -28,7 +28,7 @@
     {
       "name": "model_name_or_path",
       "type": "pretrain",
-      "value": "microsoft/layoutlmv3-base"
+      "value": "models/layoutlmv3-base"
     },
     {
       "name": "random_seed",
